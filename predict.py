@@ -51,11 +51,11 @@ class Predictor(BasePredictor):
             name="buffalo_l", providers=core.globals.providers
         )
 
-        if os.path.isfile("inswapper_128_fp16.onnx"):
+        if os.path.isfile("inswapper_128.onnx"):
             print("Model already downloaded")
-        else:
+        else: 
             run_cmd(
-                "wget https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128_fp16.onnx"
+                "wget https://github.com/facefusion/facefusion-assets/releases/download/models-3.0.0/inswapper_128.onnx"
             )
         if os.path.isfile("GFPGANv1.4.pth"):
             print("Model already downloaded")
